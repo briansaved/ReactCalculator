@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import Button from "./components/Button";
-import "./css/styles.css";
+import Button from "./components/Button"; //import the button component
+import "./css/styles.css"; //import the custome styling css file
 
 class App extends Component {
+  //always extend component
   constructor(props) {
-    super(props);
+    //instantiate the main class
+    super(props); //extend the methods of the Parent Class
 
     this.state = {
       current: "0",
