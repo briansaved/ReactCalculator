@@ -16,6 +16,7 @@ class App extends Component {
     };
   }
 
+  //method for clearing all data when "C" is clicked
   reset = () => {
     this.setState({
       current: "0",
