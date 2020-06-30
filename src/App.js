@@ -9,9 +9,10 @@ class App extends Component {
     super(props); //extend the methods of the Parent Class
 
     this.state = {
-      current: "0",
-      previous: [],
-      nextIsReset: false,
+      //set the state
+      current: "0", //used for main calculator display
+      previous: [], //for heads up display -floaty
+      nextIsReset: false, //used to clear screen when opertors are clicked
     };
   }
 
