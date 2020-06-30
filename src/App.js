@@ -25,20 +25,23 @@ class App extends Component {
     });
   };
 
+  //main function
   addToCurrent = (symbol) => {
+    //recieves symbol prop from button clicked
     if (["/", "-", "*", "+"].indexOf(symbol) > -1) {
+      //test ot check if operator is clicked
       let { previous } = this.state;
-      previous.push(this.state.current + symbol);
+      previous.push(this.state.current + symbol); //data pushed in array if operator clicked
       this.setState({ previous, nextIsReset: true });
     } else {
       if (
-        (this.state.current === "0" && symbol !== ".") ||
-        this.state.nextIsReset
+        (this.state.current === "0" && symbol !== ".") || //display number instead of 0
+        this.state.nextIsReset //state set when operator is clicked to clear screen
       ) {
         this.setState({ current: symbol, nextIsReset: false });
       } else {
         this.setState({
-          current: this.state.current + symbol,
+          current: this.state.current + symbol, //esle display whats clicked
         });
       }
     }
