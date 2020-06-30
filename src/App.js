@@ -63,6 +63,9 @@ class App extends Component {
   };
 
   render() {
+    //buttons to be rendered
+    //each object with symbol key, columns and action method
+    //notable are the reset and the calculate methods on some buttons
     const buttons = [
       { symbol: "C", cols: 3, action: this.reset },
       { symbol: "/", cols: 1, action: this.addToCurrent },
