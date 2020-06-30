@@ -47,10 +47,13 @@ class App extends Component {
     }
   };
 
+  //The calculate method uses an unsafe "eval" method and needs to be changed
   calculate = (symbol) => {
     let { current, previous, nextIsReset } = this.state;
     if (previous.length > 0) {
-      current = eval(String(previous[previous.length - 1] + current));
+      //if something is in the previous array
+      //basically evaluates the string. Very unsafe and code need to be modified
+      current = eval(String(previous[previous.length - 1] + current)); //unsafe
       this.setState({
         current,
         previous: [],
